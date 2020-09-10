@@ -438,8 +438,7 @@ bad:
     return -1;
 }
 
-uint64
-sys_pipe(void) {
+uint64 sys_pipe(void) {
     uint64 fdarray;  // user pointer to array of two integers
     struct file *rf, *wf;
     int fd0, fd1;
