@@ -272,8 +272,7 @@ create(char *path, short type, short major, short minor) {
     return ip;
 }
 
-uint64
-sys_open(void) {
+uint64 sys_open(void) {
     char path[MAXPATH];
     int fd, omode;
     struct file *f;
@@ -284,7 +283,6 @@ sys_open(void) {
         return -1;
 
     begin_op();
-
     if (omode & O_CREATE) {
         ip = create(path, T_FILE, 0, 0);
         if (ip == 0) {
@@ -335,7 +333,7 @@ sys_open(void) {
 
     iunlock(ip);
     end_op();
-
+    // printf("try to open %s: %d\n", path, fd);
     return fd;
 }
 

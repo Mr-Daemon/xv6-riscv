@@ -9,7 +9,7 @@
             "request": "attach",
             "name": "Attach to gdbserver",
             "executable": "${workspaceFolder}/kernel/kernel",
-            "target": "127.0.0.1:2336",
+            "target": "127.0.0.1:2337",
             "remote": true,
             "cwd": "${workspaceFolder}",
             "valuesFormatting": "parseText"
